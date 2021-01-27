@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:backgroundTint="#E0E0E0"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageViewBaskett"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/ic_launcher_background"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/productNameBasket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نام محصول"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_margin="30dp"
+                    />
+                <TextView
+                    android:fontFamily="@font/shabnam"
+                    android:id="@+id/productPriceBasket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productNameBasket"
+                    android:text="قیمت"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="30dp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <ImageView
+                        android:id="@+id/img_remove_basket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_remove_circle_24"
+                        android:layout_marginRight="20dp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_numb_basket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/shabnam"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_add_basket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_add"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgRemoveProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove_productt"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

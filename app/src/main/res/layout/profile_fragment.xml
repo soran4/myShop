@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@drawable/top_layer"
+        android:layoutDirection="rtl"
+        
+        >
+        <ImageView
+            android:id="@+id/img_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_setting_profile"
+            android:layout_margin="8dp"
+            />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_profilephoto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/circle_shape"
+        />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نام کاربری"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageViewProfile"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="@font/shabnam"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="برای ورود یا ثبت نام در فروشکاه شماره ی موبایل یا ایمیل خود را وارد کنید "
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/shabnam"
+            />
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layoutDirection="rtl"
+            android:background="@drawable/reqtangle_shape"
+            android:hint="شماره موبایل یا ایمیل"
+            android:textSize="15dp"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            android:paddingStart="5dp"
+            android:fontFamily="@font/shabnam"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="4dp"
+            android:text="ورود"
+            android:layout_gravity="center"
+            android:background="@drawable/reqtangle_shape"
+            android:fontFamily="@font/shabnam"/>
+
+
+
+    </LinearLayout>
+    
+
+
+
+
+
+
+
+
+</RelativeLayout>

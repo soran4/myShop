@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity"
+    android:background="@drawable/splash2"
+    >
+
+    <ImageView
+        android:id="@+id/imageViewLoginIn"
+        android:layout_width="154dp"
+        android:layout_height="155dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        />
+
+    <EditText
+        android:id="@+id/editext"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/imageViewLoginIn"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="20dp"
+        android:paddingRight="4dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15dp"
+        android:hint="برای ورود نام خود را وارد کنید"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/reqtangle_shape"
+        android:layoutDirection="rtl"
+        android:fontFamily="@font/shabnam"
+        />
+
+    <Button
+        android:id="@+id/btnlLogIn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/reqtangle_shape"
+        android:layout_below="@id/editext"
+        android:layout_centerHorizontal="true"
+        android:text="ورود"
+        android:textStyle="bold"
+        android:fontFamily="@font/shabnam"
+        />
+
+
+</RelativeLayout>

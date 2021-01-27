@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:counter="http://schemas.android.com/tools"
+    android:id="@+id/homeLayout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layoutDirection="rtl">
+
+        <EditText
+            android:id="@+id/editTextMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/shabnam"
+            android:hint="جستجو در فروشگاه..."
+            android:textSize="13dp"
+            android:layoutDirection="rtl"
+            android:textColor="@color/brown"
+            android:textColorHint="@color/brownLight"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/txt_counter"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_baseline_shopping_cart_24"
+        android:paddingStart="12dp"
+        android:paddingTop="6dp"
+        android:textColor="#fff"
+        android:textSize="13dp"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarHome">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/banerSliderL"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="12dp">
+
+                    <ss.com.bannerslider.Slider
+                        android:id="@+id/banerSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:slider_animateIndicators="true"
+                        app:slider_interval="4000"
+                        app:slider_loopSlides="true" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/circle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/banerSliderL"
+                android:layoutDirection="rtl">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclear_circle_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/nuts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/circle_layout"
+                android:layout_marginTop="10dp"
+                android:layoutDirection="rtl"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layoutDirection="rtl"
+                    android:id="@+id/recyclear_best"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/brown">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nuts"
+                android:layoutDirection="rtl">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclearViewMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
