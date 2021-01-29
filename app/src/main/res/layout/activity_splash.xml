@@ -7,7 +7,6 @@
     tools:context=".SplashActivity"
     android:gravity="center"
     android:background="@drawable/splash3"
-    android:backgroundTint=""
     >
 
 
