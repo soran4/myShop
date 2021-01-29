@@ -14,7 +14,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="فروشگاه آجیل و خشکبار"
+        android:text="nuts store"
         android:fontFamily="@font/shabnam"
         android:textStyle="bold"
         android:textSize="22dp"
