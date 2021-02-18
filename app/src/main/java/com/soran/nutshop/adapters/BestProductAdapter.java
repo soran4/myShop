@@ -13,19 +13,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.soran.nutshop.R;
+import com.soran.nutshop.database.MyDataBase;
+import com.soran.nutshop.listener.OnAddBestProduct;
+import com.soran.nutshop.listener.OnAddProduct;
 import com.soran.nutshop.model.Product;
 
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 
 public class BestProductAdapter extends RecyclerView.Adapter<BestProductAdapter.MyViewHolder> {
 
     Context context;
     List<Product> productList;
+    OnAddBestProduct onAddBestProduct;
 
-    public BestProductAdapter(Context context, List<Product> productList) {
+    public BestProductAdapter(Context context, List<Product> productList,OnAddBestProduct onAddBestProduct) {
         this.context = context;
         this.productList = productList;
+        this.onAddBestProduct = onAddBestProduct;
     }
 
     @NonNull
@@ -55,16 +62,40 @@ public class BestProductAdapter extends RecyclerView.Adapter<BestProductAdapter.
         return productList.size();
     }
 
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imageViewBest;
         TextView txt_name;
         TextView txt_bestPrice;
+        ImageView img_add;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imageViewBest = itemView.findViewById(R.id.imageViewbest);
             txt_name = itemView.findViewById(R.id.txt_name_best);
             txt_bestPrice = itemView.findViewById(R.id.txt_price_best);
+            img_add = itemView.findViewById(R.id.img_add_to);
+
+            img_add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Product product = productList.get(getAdapterPosition());
+                    product.setQuantity(product.getQuantity()+1);
+
+                    MyDataBase myDataBase = MyDataBase.getInstance(context);
+                    Executor executor = Executors.newSingleThreadExecutor();
+
+                    executor.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            myDataBase.productdao().addProduct(product);
+                        }
+                    });
+
+                }
+            });
+            onAddBestProduct.onBestProductAdded();
         }
+
     }
 }

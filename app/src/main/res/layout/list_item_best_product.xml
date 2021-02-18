@@ -49,6 +49,7 @@
                 />
 
             <ImageView
+                android:id="@+id/img_add_to"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_name_best"

@@ -33,6 +33,7 @@ import com.soran.nutshop.adapters.CircleImgAdapter;
 import com.soran.nutshop.adapters.HomeProductAdapter;
 import com.soran.nutshop.adapters.SliderAdapter;
 import com.soran.nutshop.database.MyDataBase;
+import com.soran.nutshop.listener.OnAddBestProduct;
 import com.soran.nutshop.listener.OnAddProduct;
 import com.soran.nutshop.model.Product;
 
@@ -49,6 +50,7 @@ public class HomeFragment extends Fragment {
 
     List<Product> productList;
     HomeProductAdapter homeProductAdapter;
+    BestProductAdapter bestProductAdapter;
     MyDataBase dataBase;
     Executor executor;
     TextView textView;
@@ -82,6 +84,14 @@ public class HomeFragment extends Fragment {
             }
         };
 
+        OnAddBestProduct onAddBestProduct = new OnAddBestProduct() {
+            @Override
+            public void onBestProductAdded() {
+                    updateCounter();
+            }
+        };
+
+
 
         homeProductAdapter = new HomeProductAdapter(getActivity(), productList,onAddProduct);
         Slider.init(new GlideImageLoadingService(getContext()));
@@ -90,7 +100,7 @@ public class HomeFragment extends Fragment {
         slider.setSelectedSlide(1);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclear_best);
-        BestProductAdapter bestProductAdapter = new BestProductAdapter(getActivity(),getDammyData());
+        bestProductAdapter = new BestProductAdapter(getActivity(),getDammyData(),onAddBestProduct);
         recyclerView.setAdapter(bestProductAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
 
