@@ -10,9 +10,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
@@ -30,6 +32,7 @@ public class ProfileFragment extends Fragment {
     public static final String LOGIN = "login";
     TextView txtUserName;
     View view;
+    Button btn_logIn;
 
     @Nullable
     @Override
@@ -56,6 +59,15 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        btn_logIn = view.findViewById(R.id.btn_siginIn);
+
+        btn_logIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
 
         ImageView imageView = view.findViewById(R.id.img_setting);
         imageView.setOnClickListener(new View.OnClickListener() {

@@ -82,14 +82,15 @@
             android:fontFamily="@font/shabnam"/>
 
         <Button
+            android:id="@+id/btn_siginIn"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="4dp"
-            android:text="ورود"
-            android:layout_gravity="center"
             android:background="@drawable/reqtangle_shape"
-            android:fontFamily="@font/shabnam"/>
+            android:fontFamily="@font/shabnam"
+            android:text="ورود یا عضویت" />
 
 
 
