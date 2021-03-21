@@ -37,6 +37,17 @@
                 android:fontFamily="@font/shabnam"
                 />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="50dp"
+                android:text="مشاهده ی همه... "
+                android:textStyle="bold"
+                android:textColor="#039BE5" />
+
+
 
             <RelativeLayout
                 android:id="@+id/nuts"
@@ -49,13 +60,28 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclearviewCategory"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/recyclearBG"
+                    >
 
 
                 </androidx.recyclerview.widget.RecyclerView>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:textStyle="bold"
+                    android:text="مشاهده ی همه... "
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#039BE5"
+                    android:layout_below="@id/recyclearviewCategory"
+                    />
+
+
 
             </RelativeLayout>
+
 
             <RelativeLayout
                 android:id="@+id/fruits"
@@ -69,10 +95,24 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rexyclearChoclate"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/recyclearBG"
+                    >
 
 
                 </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rexyclearChoclate"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="40dp"
+                    android:textStyle="bold"
+                    android:text="مشاهده ی همه... "
+                    android:textColor="#039BE5"
+                    />
+
 
 
             </RelativeLayout>
@@ -82,12 +122,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/nuts"
                 android:layout_marginStart="12dp"
+                android:fontFamily="@font/shabnam"
                 android:text="شکلات"
                 android:textColor="@color/brown"
                 android:textSize="15dp"
-                android:fontFamily="@font/shabnam"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -113,7 +154,9 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclearFruits"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/recyclearBG"
+                    >
 
 
                 </androidx.recyclerview.widget.RecyclerView>

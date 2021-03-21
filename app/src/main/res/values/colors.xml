@@ -10,4 +10,6 @@
     <color name="brown">#6D4C41</color>
     <color name="brownLight">#795548</color>
     <color name="orange">#F14609</color>
+    <color name="recyclearBG">#BDBDBD</color>
+
 </resources>
